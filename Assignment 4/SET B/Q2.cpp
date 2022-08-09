@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+class data
+{
+public:
+
+	void print(int p)
+	{
+		cout<<"Entered value is "<<"<"<<p<<">"<<endl;
+	}
+
+	void print(char *p)
+	{
+		cout<<"Entered name is "<<"<"<<p<<">"<<endl;
+	}
+
+	void print(int n,char *p)
+	{
+		cout<<"\"";
+		for(int i=0;i<n;i++)
+			cout<<p[i];
+		cout<<"\"";
+		cout<<endl;
+	}
+};
+
+	int main()
+	{
+
+		int n,num;
+		char name[20];
+		data p;
+
+		do{
+			cout<<"Following are the operations\n1 call void print(int n)\n2 call void print(char *)\n3 call void print(int n,char *)\n4 Terminate\n";
+			cin>>n;
+
+		switch(n)
+		{
+			case 1: cout<<"Enter number to print\n";
+				cin>>num;
+				p.print(num);
+				cout<<endl;
+				break;
+
+			case 2: cout<<"Enter name to print\n";
+				cin>>name;
+				p.print(name);
+				cout<<endl;
+				break;
+
+			case 3: cout<<"Number of alphabets you want to display\n";
+				cin>>num;
+				cout<<"Enter name to print\n";
+				cin>>name;
+				p.print(num,name);
+				cout<<endl;
+				break;
+
+			case 4: cout<<"You have been exited\n";
+				break;
+	}
+}while(n!=4);
+}
+
+
+

@@ -1,0 +1,122 @@
+#include<iostream>
+using namespace std;
+
+float si(float p,float n)
+{
+	return ((p*n*5)/100);
+}
+
+float si(float p,float n,float r)
+{
+	return ((p*n*r)/100);
+}
+
+int main()
+{
+	float p,n,a,b,c;
+
+	cout<<"Enter initial principle amount : \n";
+	cin>>p;
+	
+	cout<<"Enter value of n : \n";
+	cin>>n;
+	
+	cout<<"Simple interest of given data with rate 5% is "<<si(p,n)<<endl;
+	
+	cout<<"Enter initial principle amount : \n";
+	cin>>a;
+	
+	cout<<"Enter value of n : \n";
+	cin>>b;
+	
+	cout<<"Enter rate of interest : \n";
+	cin>>c;
+	
+	cout<<"Simple interest of given data with rate of interest "<<c<<" and number of years "<<b<<" is "<<si(a,b,c)<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include<iostream>
+using namespace std;
+class SI
+{
+   float p,r;
+    int n;
+public:
+int  cal(float p2,int n1,float r=5)
+{
+         p=p2;
+         n=n1;
+	return(((p*n*r)/100));
+}
+
+int  cal(float p1,int n=10,float r=7)
+{
+        p=p1;
+	return (((p*r*n)/100));
+}
+};
+int main()
+{
+         SI s;
+	float p,r;
+	int n;
+	cout<<"\nEnter principle amount : ";
+	cin>>p;
+
+	cout<<"\nEnter number of months : ";
+	cin>>n;
+	
+
+	cout<<"\nSimple interest with rate 5 percent is :\t ";
+	s.cal(p,n);
+   
+        cout<<"Simple interest with time 10 year and rate 7 percent is:\t";
+        s.cal(p);
+
+	
+	return 0;
+}*/
