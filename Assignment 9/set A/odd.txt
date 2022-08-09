@@ -1,0 +1,6 @@
+1		1		3		5		13		21		
+
+The count of odd  number :6
+
+
+The Average of odd Number is :7

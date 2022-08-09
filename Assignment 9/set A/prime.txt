@@ -1,0 +1,6 @@
+0		2		8		34		
+
+The count of Even Num is :4
+
+
+The average of Even Number is :11

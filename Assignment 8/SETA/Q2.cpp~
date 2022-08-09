@@ -1,0 +1,94 @@
+#include<iostream>
+using namespace std;
+class media
+{
+   int id;
+   char title[30];
+public:
+            virtual void accept()
+            {
+                cout<<"Enter Id of media:\n";
+                cin>>id;
+                cout<<"Enter title of media:\n";
+                cin>>title;
+            }
+ 
+            virtual void display()
+            {
+                 cout<<"Id of media is:\t"<<id<<endl;
+                 cout<<"Title of media is:"<<title<<endl;
+            }
+            
+};
+
+class book:public media
+{
+    long int isno;
+public:
+       void accept()
+       { 
+            cout<<"Enter the isbn no of book:\n";
+            cin>>isno;
+       }
+        void display()
+       {
+         cout<<"Isbn number of book is:\t"<<isno<<endl;
+       } 
+
+};
+
+
+class cd:public media
+{
+     char dcapacity[30];
+public:
+        void accept()
+       { 
+            cout<<"Enter the data capacity of CD:\n";
+            cin>>dcapacity;
+       }
+        void display()
+       {
+         cout<<"Data capacity of CD is:\t"<<dcapacity<<endl;
+       } 
+};
+
+int main()
+{
+ int n;
+       cout<<"How many details you want\n";
+       cin>>n;
+     media *obj;
+     media obj1[n];
+     book b[n];
+     cd c[n];
+         for(int i=0;i<n;i++)
+         {
+             cout<<"Enter detail:"<<i+1<<endl;
+             obj=&obj1[i];
+             obj->accept();
+             obj->display();
+         }
+        cout<<"*****************\n";
+   
+        for(int i=0;i<n;i++)
+         {
+             cout<<"Enter detail:"<<i+1<<endl;
+             obj=&b[i];
+             obj->accept();
+             obj->display();
+         }   
+
+          cout<<"********************\n";
+  
+          for(int i=0;i<n;i++)
+         {
+             cout<<"Enter detail:"<<i+1<<endl;
+             obj=&c[i];
+             obj->accept();
+             obj->display();
+         } 
+
+
+
+}

@@ -1,0 +1,91 @@
+#include<iostream>
+using namespace std;
+ int top=-1;
+int p=-1;
+int q=-1;
+
+class list
+{
+protected:
+            int arr[20];
+public:
+    virtual void store()=0;
+    virtual void retrieve()=0;
+};
+
+class stack:public list
+{
+ private:
+
+ int ele;
+public:    
+    void store() 
+    {  
+         cout<<"Enter element to store in stack:\n";
+         cin>>ele;        
+         top++;
+         arr[top]=ele;
+         cout<<"e="<<arr[top]<<endl;
+    }
+    void retrieve()
+    { 
+   
+         
+       cout<<"Element of stack is:"<<arr[top--]<<endl; 
+        
+    }
+      
+       
+    
+};
+
+class queue:public list
+{
+      int ele;
+ public:
+        void store() 
+    {  
+         cout<<"Enter element to store in queue:\n";
+         cin>>ele;
+         q++;
+         arr[q]=ele;
+         p++;
+    }
+    void retrieve()
+    {   
+       cout<<"Element of queue is:"<<arr[p--]<<endl; 
+        
+    }
+      
+};       
+
+int main()
+{
+ int n;
+        cout<<"How many elements you want in stack:\n";
+        cin>>n;     
+        stack s[n];
+        queue q[n];
+        for(int i=0;i<n;i++)
+        {
+          cout<<" Enter Element:"<<i+1<<endl;
+          s[i].store();
+        }
+       for(int i=0;i<n;i++)
+        {
+          cout<<" Display Element:"<<i+1<<endl;
+          s[i].retrieve();
+        }
+           for(int i=0;i<n;i++)
+        {
+          cout<<" Enter Element:"<<i+1<<endl;
+          q[i].store();
+        }
+        for(int i=0;i<n;i++)
+        {
+          cout<<" Display Element:"<<i+1<<endl;
+          q[i].retrieve();
+        }
+ }               
+
+
